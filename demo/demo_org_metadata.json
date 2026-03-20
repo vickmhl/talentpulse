@@ -1,0 +1,25 @@
+﻿{
+    "company_name":  "NovaEdge Technologies",
+    "product_name":  "TalentPulse",
+    "employees_count":  300,
+    "departments":  [
+                        "CEO Office / Strategy Office",
+                        "Product",
+                        "Engineering",
+                        "Sales",
+                        "Customer Success",
+                        "Operations",
+                        "Marketing",
+                        "HR",
+                        "Finance \u0026 Legal",
+                        "IT / Data Support"
+                    ],
+    "org_risks":  [
+                      "Engineering has many high-potential employees but too few Ready Now successors.",
+                      "Sales is strong on performance but carries elevated flight risk and star reliance.",
+                      "Operations is stable but has a shallow future bench.",
+                      "Product has concentrated critical roles and single-point dependency.",
+                      "Customer Success under-identifies high potential talent.",
+                      "HR, Finance and IT have thin but high-risk succession benches."
+                  ]
+}
