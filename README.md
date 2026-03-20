@@ -1,13 +1,157 @@
-# TalentPulse
+﻿# TalentPulse V2
 
-TalentPulse 是一个面向 HR 学生的 PC Web 作品集项目，用来演示从人才盘点到继任分析的完整主链路。
+TalentPulse is a PC web portfolio product for HR students and early-career HR practitioners. The product is designed to help users demonstrate three things in interviews:
 
-## 项目目录结构
+- AI usage ability
+- Analytical ability
+- Organizational diagnosis ability
+
+This is not a heavy admin system. It is a static-deploy-friendly AI talent review and succession diagnosis experience that turns employee data into report-ready organizational insight.
+
+## V2 Positioning
+
+The second version is rebuilt around one product promise:
+
+`Turn employee data into report-ready organizational insight.`
+
+The product narrative now follows:
+
+`Describe -> Explain -> Predict -> Control -> Report`
+
+That means the experience is built to answer five questions:
+
+1. What is happening now?
+2. Why is it happening?
+3. What may happen next?
+4. What should be done now?
+5. How can this be presented as a report?
+
+## Primary Navigation
+
+The V2 information architecture centers on six primary pages:
+
+- Home
+- Overview
+- Talent Review
+- Succession
+- Data Health
+- Report
+
+`Home`, `Overview`, and `Report` are the strongest portfolio pages.
+
+## What Changed in V2
+
+### 1. Home was rebuilt as a portfolio entry page
+
+Home now clearly emphasizes two entry points:
+
+- Try Demo
+- Upload Employee Data
+
+It also highlights the AI value proposition, the NovaEdge demo company story, and the end-to-end workflow from diagnosis to report.
+
+### 2. Overview became the strongest page in the product
+
+Overview is now the main 2-3 minute interview storytelling page. It includes:
+
+- Executive Summary
+- Describe section
+- Explain section
+- Predict section
+- Control section
+- Drill-down links
+- Fragile key-role table
+
+### 3. Data Health became a trust page instead of a dirty-data list
+
+The page now explains:
+
+- what the system auto-understood
+- what it auto-fixed
+- what still needs caution
+- how trustworthy the current analysis is
+
+### 4. Talent Review now tells a talent story
+
+The page now supports explaining:
+
+- department talent density
+- high-potential concentration
+- high performers who are not successor-ready
+- a selected talent narrative for interview walkthroughs
+
+### 5. Succession now focuses on bench strength and exposure
+
+The page now emphasizes:
+
+- critical role coverage
+- ready-now / ready-soon distribution
+- heatmap of role readiness
+- role detail panel
+- uncovered role list
+- action-oriented succession risk summary
+
+### 6. Report is now a real presentation page
+
+The page now follows a report structure:
+
+- Current State
+- Why It Is Happening
+- What May Happen Next
+- What To Do Now
+- Priority Actions
+
+It is designed to be read directly in an interview or stakeholder presentation.
+
+## Demo Story
+
+The official demo company is `NovaEdge Technologies` with roughly 300 employees.
+
+The demo is intentionally structured to surface stable organizational stories:
+
+- R&D has strong high-potential density but thin ready-now leadership cover
+- Sales performs strongly but carries high flight risk and star dependency
+- Operations is stable but stagnant
+- Product has concentrated critical-role dependency
+- Customer Success has weaker high-potential identification quality
+- HR, Finance, and IT have small but high-risk succession benches
+
+## Data Capabilities
+
+TalentPulse V2 keeps static deployment simple while making AI value visible in the product.
+
+### Auto-detect and normalization
+
+The site attempts to automatically:
+
+- recognize common employee field names
+- normalize department and role aliases
+- standardize date formats
+- de-duplicate analytical records
+
+### Upload support
+
+The site supports:
+
+- CSV upload directly in-browser
+- XLSX upload through the browser spreadsheet parser on the hosted version
+
+### Data confidence
+
+The site evaluates:
+
+- auto-fixed issues
+- caution-level issues
+- material risk issues
+- overall analysis confidence
+
+## Key Files
 
 ```text
 TalentPulse/
 ├─ index.html
 ├─ README.md
+├─ GITHUB_PAGES_DEPLOY.md
 ├─ demo/
 │  ├─ demo_talentpulse_company.xlsx
 │  ├─ demo_employees.json
@@ -15,135 +159,41 @@ TalentPulse/
 │  ├─ demo_scenario_guide.md
 │  └─ demo_expected_insights.md
 ├─ scripts/
-│  ├─ generate-demo-clean.ps1
-│  └─ generate-demo.ps1
+│  └─ generate-demo-clean.ps1
 └─ src/
-   ├─ app.js
+   ├─ demo-data.js
+   ├─ app-v2.js
    └─ styles.css
 ```
 
-## 核心实现说明
+## Run Locally
 
-- 使用单页 PC 工作台串联完整流程：导入 -> 映射 -> 数据问题中心 -> 九宫格 -> SHL 高潜 -> 继任分析 -> 热力图 -> 员工画像 -> 报告导出。
-- 统一蓝白 B 端 SaaS 视觉：卡片化、大留白、轻阴影、统一按钮与表格。
-- 内置官方 Demo 数据，并在前端直接完成清洗、字段映射展示、问题识别、高潜计算和继任评分。
-- 页面支持筛选、问题抽屉、员工联动、热力图点击和导出摘要。
+The project can still be opened directly by double-clicking `index.html`.
 
-## 数据模型说明
+For the hosted version, GitHub Pages static deployment remains supported.
 
-### 原始字段
+## Deploy
 
-官方 Demo 数据包含以下核心字段：
+GitHub Pages deployment notes are in:
 
-- `employee_id`
-- `name`
-- `gender`
-- `age`
-- `department`
-- `sub_department`
-- `position_title`
-- `job_family`
-- `job_level`
-- `manager_id`
-- `tenure_years`
-- `hire_date`
-- `city`
-- `performance_current`
-- `performance_last_year`
-- `potential_level`
-- `training_completion_rate`
-- `promotion_count`
-- `mobility_flag`
-- `critical_role_flag`
-- `successor_nomination_flag`
-- `readiness_level`
-- `flight_risk`
-- `manager_recommendation`
-- `engagement_score`
-- `salary_band`
+- `GITHUB_PAGES_DEPLOY.md`
 
-### 数据处理逻辑
+## Verification
 
-- 字段映射：展示标准字段与自动匹配结果。
-- 自动清洗：空格、日期标准化、重复记录去重、别名标准化。
-- 需确认：部门别名、岗位别名、工号冲突、异常年龄/司龄、缺失值、职级不一致。
-- 仅标记：错误 manager_id、准备度冲突、推荐冲突、关键岗位无继任提名、部门评分偏差。
+The V2 runtime entry is:
 
-### SHL 高潜模型
+- `src/app-v2.js`
 
-4 维得分：
+The script passes:
 
-- 学习敏捷度：培训完成率、晋升次数、流动意愿、潜力等级
-- 领导驱动力：绩效、管理者推荐、关键岗位暴露
-- 人际影响力：敬业度、推荐口径
-- 战略思维：绩效稳定性、岗位层级、关键岗位经历
-
-综合高潜等级：
-
-- `A`: `score >= 80`
-- `B`: `68 <= score < 80`
-- `C`: `score < 68`
-
-### 5 维继任准备度模型
-
-- 当前绩效
-- 潜力水平
-- 岗位匹配度
-- 关键经验
-- 管理者推荐 / 发展准备度
-
-输出层级：
-
-- `Ready Now`
-- `Ready in 1-2 Years`
-- `Ready in 2-3 Years`
-- `Not Ready Yet`
-
-## Demo 数据文件说明
-
-- `demo_talentpulse_company.xlsx`: 官方 Excel 演示数据，约 300 人。
-- `demo_employees.json`: 前端直接读取的同源数据文件。
-- `demo_org_metadata.json`: 企业元数据与组织风险摘要。
-- `demo_scenario_guide.md`: 演示讲述顺序。
-- `demo_expected_insights.md`: 预期洞察摘要。
-
-数据中已注入以下组织问题：
-
-- 研发高潜多但 Ready Now 少
-- 销售绩效强但流动风险高
-- 运营稳定但成长停滞
-- 产品关键岗位集中
-- 客户成功高潜识别不足
-- HR / 财务 / IT 继任风险偏高
-
-同时包含脏数据：
-
-- 空格
-- 部门 / 岗位别名
-- 日期格式混乱
-- 工号冲突
-- 重复记录
-- 缺失值
-- 年龄 / 司龄异常
-- 业务规则冲突
-
-## 运行方式
-
-现在可以直接双击 [index.html](D:\Codex\人才盘点工具v4\index.html) 打开。
-
-项目已经内置本地 Demo 脚本数据，即使不启动本地服务器，也能直接展示完整主链路。
-
-如果后续你想切回读取 `demo/` 目录里的真实文件，再用静态服务器打开也可以。
-
-## 重新生成 Demo 数据
-
-```powershell
-.\scripts\generate-demo-clean.ps1
+```bash
+node --check .\src\app-v2.js
 ```
 
-## 后续优化建议
+## Next Iteration Ideas
 
-- 接入真正的 `.xlsx` 浏览器解析能力，补齐前端上传解析闭环。
-- 将当前单文件前端拆分为组件模块和数据服务模块，便于后续迭代。
-- 增加更完整的图表交互和导出为 PDF 的能力。
-- 补充更细的组织层级切换、岗位族对比和部门 drill-down。
+- split the current runtime file into smaller modules
+- improve CSV parsing robustness for quoted commas
+- add a dedicated profile route while keeping the six-page main navigation
+- export a richer report format such as Markdown or PDF
+- deepen the Explain and Predict logic with more scenario templates
