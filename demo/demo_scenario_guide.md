@@ -1,6 +1,31 @@
-﻿# TalentPulse Demo Scenario Guide
+﻿# TalentPulse V4 演示说明
 
-1. Start from overview and enter official demo data.
-2. Show import, mapping and data issue center.
-3. Explain nine-box, SHL potential and succession readiness.
-4. Use profile and report export to close the story.
+## 官方讲述版
+
+建议用于：
+
+1. 首页进入后的官方演示
+2. 总览页 2 分钟讲述
+3. 汇报报告页收口
+
+讲述顺序建议：
+
+1. 先看总览，给出组织判断、风险等级与优先动作
+2. 再下钻人才盘点，说明人才密度、伪强项与梯队断层
+3. 再下钻继任分析，说明覆盖、空窗与单点依赖
+4. 最后回到汇报报告，完成收口
+
+## AI 清洗演示版
+
+建议用于：
+
+1. 上传演示
+2. 数据健康页
+3. 字段识别、自动归一与可信度说明
+
+展示重点：
+
+1. 系统自动识别常见字段含义
+2. 系统自动统一部门、岗位、准备度等口径
+3. 系统自动标记重复、异常、缺失与冲突
+4. 在存在风险提示时，仍能说明哪些判断可以继续使用

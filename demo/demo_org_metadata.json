@@ -1,25 +1,45 @@
 ﻿{
-    "company_name":  "NovaEdge Technologies",
-    "product_name":  "TalentPulse",
-    "employees_count":  300,
-    "departments":  [
-                        "CEO Office / Strategy Office",
-                        "Product",
-                        "Engineering",
-                        "Sales",
-                        "Customer Success",
-                        "Operations",
-                        "Marketing",
-                        "HR",
-                        "Finance \u0026 Legal",
-                        "IT / Data Support"
-                    ],
-    "org_risks":  [
-                      "Engineering has many high-potential employees but too few Ready Now successors.",
-                      "Sales is strong on performance but carries elevated flight risk and star reliance.",
-                      "Operations is stable but has a shallow future bench.",
-                      "Product has concentrated critical roles and single-point dependency.",
-                      "Customer Success under-identifies high potential talent.",
-                      "HR, Finance and IT have thin but high-risk succession benches."
-                  ]
+  "公司名称": "澄曜科技",
+  "产品名称": "TalentPulse",
+  "行业": "企业软件 / 数字科技",
+  "人数": 300,
+  "官方讲述版": {
+    "标签": "官方讲述版",
+    "用途": ["首页", "总览", "汇报报告"],
+    "部门": [
+      "战略办公室",
+      "产品与设计",
+      "研发中心",
+      "销售增长",
+      "客户成功",
+      "交付运营",
+      "市场品牌",
+      "人力资源",
+      "财务法务",
+      "IT与数据平台"
+    ]
+  },
+  "AI清洗演示版": {
+    "标签": "AI 清洗演示版",
+    "用途": ["上传演示", "数据健康", "自动识别与归一化"],
+    "脏数据模式": [
+      "字段别名混用",
+      "部门别名与岗位简称",
+      "日期格式混用",
+      "重复工号",
+      "缺失潜力标签",
+      "年龄异常",
+      "准备度与绩效冲突",
+      "上级工号错误",
+      "关键岗位无继任提名"
+    ]
+  },
+  "组织风险": [
+    "研发中心：高潜储备不低，但现在可接任管理梯队偏薄",
+    "销售增长：当前业绩强，但头部依赖重、保留风险高",
+    "交付运营：运行稳定，但成长动能不足、后备薄",
+    "产品与设计：关键岗位集中，单点依赖明显",
+    "客户成功：团队规模不小，但高潜识别不足",
+    "人力资源 / 财务法务 / IT与数据平台：人数少但继任暴露高"
+  ]
 }

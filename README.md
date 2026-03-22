@@ -1,136 +1,175 @@
-﻿# TalentPulse V3
+﻿# TalentPulse V4
 
-TalentPulse is a PC web portfolio product for HR students and early-career HR practitioners.
+TalentPulse 是一个面向 HR 学生与初级 HR 从业者的 PC 网页端作品。
 
-It is not a heavy HR SaaS or an admin backend. It is an AI-assisted talent review and succession diagnosis workbench built for interview presentation.
+它不是企业级 HR SaaS，也不是配置型后台，而是一套把员工数据自动转成可汇报组织洞察的 AI 诊断工作台。
 
-The core product promise is:
+核心产品主张：
 
-`Turn employee data into report-ready organizational diagnosis.`
+`把员工数据转成可汇报的组织诊断。`
 
-## V3 Product Positioning
+## 项目定位
 
-TalentPulse V3 is designed to help a user prove three things in an interview:
+TalentPulse V4 重点帮助用户在面试中证明三件事：
 
-- They can use AI to structure messy HR data.
-- They can diagnose organizational issues instead of only reading charts.
-- They can turn people data into management-ready language and actions.
+- 会用 AI 处理杂乱的人力数据
+- 能做组织诊断，而不只是看图表
+- 能把人才数据翻译成管理层能听懂的问题、风险与动作
 
-The experience is organized around six pages:
+全站固定为 6 个一级页面：
 
-- Home
-- Overview
-- Talent Review
-- Succession
-- Data Health
-- Report
+- 首页
+- 总览
+- 人才盘点
+- 继任分析
+- 数据健康
+- 汇报报告
 
-`Home`, `Overview`, and `Report` are the main stage.
-`Talent Review`, `Succession`, and `Data Health` are evidence pages.
+其中：
 
-## V3 Narrative Framework
+- 首页 / 总览 / 汇报报告：主舞台
+- 人才盘点 / 继任分析 / 数据健康：证据页
 
-The main analytical flow is:
+## V4 升级重点
 
-`Conclusion -> Evidence -> Explanation -> Risk -> Action`
+V4 只收四类能力：
 
-Across the product this maps to:
+1. 全中文产品化
+2. 演示数据拆分为官方讲述版与 AI 清洗演示版
+3. 分析引擎改成“结构信号识别 -> 问题组合”
+4. 总览页与汇报页更像正式中文汇报作品
 
-- Describe
-- Explain
-- Predict
-- Control
-- Report
+## 双演示样本设计
 
-## Demo Story
+### 1. 官方讲述版
 
-The official demo company is `NovaEdge Technologies` with about 300 employees.
+用途：
 
-The demo is intentionally structured to surface stable organizational issues:
+- 首页演示
+- 总览讲述
+- 面试展示
 
-- R&D has strong high-potential density but thin ready-now leadership cover.
-- Sales performs strongly but carries star dependency and high flight risk.
-- Operations is stable but short on growth momentum.
-- Product has concentrated critical-role dependency.
-- Customer Success has weaker high-potential visibility than its size suggests.
-- HR, Finance, and IT are small but succession-fragile.
+特点：
 
-## What Changed in V3
+- 公司名、部门名、岗位名全部中文
+- 数据口径统一，不故意注入脏值
+- 组织故事稳定，可在 2 分钟内讲清
 
-### 1. Home is now a portfolio entry page
+### 2. AI 清洗演示版
 
-Home now emphasizes:
+用途：
 
-- product pitch
-- Demo / Upload dual entry
-- AI value proof
-- demo cockpit preview
-- lightweight upload reassurance
+- 上传演示
+- 数据健康页
+- 字段识别、归一化与可信度说明
 
-### 2. Overview is now the single-page control tower
+特点：
 
-Overview now follows a fixed diagnostic structure:
+- 保留少量字段别名、部门别名、岗位简称
+- 保留少量缺失、异常、重复与口径冲突
+- 组织故事与官方讲述版保持一致
 
-- Executive Summary Hero
-- Current State
-- Key Issues
-- Why It's Happening
-- Priority Focus
-- Risk Outlook
-- Recommended Actions
-- Drill-down links
+## 演示公司故事
 
-### 3. Analysis logic is no longer only department-threshold storytelling
+官方演示公司为 `澄曜科技`，规模约 300 人，核心组织故事固定为：
 
-V3 introduces a signal-based diagnosis layer. It first detects structural signals such as:
+- 研发中心：高潜储备不低，但现在可接任管理梯队偏薄
+- 销售增长：当前业绩强，但头部依赖重、保留风险高
+- 交付运营：运行稳定，但成长动能不足、后备薄
+- 产品与设计：关键岗位集中，单点依赖明显
+- 客户成功：团队规模不小，但高潜识别不足
+- 人力资源 / 财务法务 / IT与数据平台：人数少但继任暴露高
 
-- high-potential concentration
-- ready-now shortage
-- high-performer / successor mismatch
-- uncovered critical-role clusters
-- single-point dependency
-- support-function low-visibility risk
-- low pipeline signals
+## 分析框架
 
-These signals are then combined into issues and report-ready judgments.
+V4 的诊断逻辑不再直接按部门写死故事，而是先识别统一结构信号，再组合成问题。
 
-### 4. Evidence pages now stay organization-first
+### 第一段：识别结构信号
 
-`Talent Review` and `Succession` now lead with organizational judgments. Employee and candidate details are pushed lower and wrapped as secondary drill-down evidence instead of taking first-screen attention.
+- 高潜集中但现在可接任偏薄
+- 高绩效集中且高离职风险高
+- 关键岗位无后备聚集
+- 覆盖存在但深度不足
+- 单点依赖明显
+- 稳定但低高潜、低 1-2 年可接任储备
+- 支持职能低可见度风险
 
-### 5. Data Health now behaves as a trust page
+### 第二段：组合成组织问题
 
-The page now focuses on:
+- 潜力高 + 现在可接任薄 = 高潜没有顺利转成近端梯队
+- 绩效强 + 风险高 = 当前业绩依赖少数关键人
+- 稳定 + 低高潜 + 低 1-2 年可接任储备 = 稳定掩盖停滞
+- 无后备 + 单点依赖 = 岗位暴露具有结构性
 
-- confidence verdict
-- auto-understood fields
-- auto-fixed normalization work
-- low-confidence areas
-- impact on analysis
-- appendix evidence table
+## 页面结构
 
-### 6. Report now models real issue structure
+### 首页
 
-Each top issue is expressed as:
+- 产品定位
+- 官方讲述版入口
+- 上传员工数据入口
+- 演示驾驶舱预览
+- 作品能力证明
+- 极简分析流程
 
-- issue title
-- phenomenon
-- root cause
-- likely consequence
-- recommended move
+### 总览
 
-## Runtime and File Structure
+- 总览 Hero
+- 当前状态
+- 重点问题
+- 原因解释
+- 当前优先聚焦
+- 风险前瞻
+- 行动建议
+- 查看证据入口
 
-Current runtime entry:
+### 人才盘点
+
+- 人才快照
+- 3 个结构判断
+- 九宫格证据
+- 部门判断卡
+- 伪强项
+- 梯队断层
+- 人才样本抽屉
+
+### 继任分析
+
+- 继任健康判断
+- 无后备 / 弱覆盖 / 单点依赖
+- 覆盖快照
+- 支持职能风险
+- 岗位风险热力图
+- 候选人抽屉
+
+### 数据健康
+
+- 可信度结论
+- 自动识别了什么
+- 自动修复了什么
+- 需谨慎的地方
+- 影响范围
+- 附录证据
+
+### 汇报报告
+
+- 当前状态
+- 主要问题
+- 根因解释
+- 未来风险
+- 优先动作
+- 追问准备
+
+## 当前运行入口
+
+V4 当前运行文件为：
 
 - `index.html`
-- `src/app-v3.js`
+- `src/demo-data-v4.js`
+- `src/v4/analysis-engine-v4.js`
+- `src/app-v4.js`
 
-Analysis logic is now separated into:
-
-- `src/v3/analysis-engine.js`
-
-Key source files:
+## 目录结构
 
 ```text
 TalentPulse/
@@ -144,45 +183,40 @@ TalentPulse/
 │  └─ demo_expected_insights.md
 ├─ src/
 │  ├─ demo-data.js
+│  ├─ demo-data-v4.js
 │  ├─ styles.css
-│  ├─ app-v3.js
-│  └─ v3/
-│     └─ analysis-engine.js
+│  ├─ app-v4.js
+│  └─ v4/
+│     └─ analysis-engine-v4.js
 └─ scripts/
    └─ generate-demo-clean.ps1
 ```
 
-## Upload Support
+## 上传能力
 
-The product supports:
+当前支持：
 
-- CSV upload in-browser
-- XLSX upload in-browser when the spreadsheet parser is available
+- 浏览器端上传 CSV
+- 浏览器端上传 XLSX（解析器可用时）
 
-The upload flow attempts to:
+上传后会优先尝试：
 
-- auto-detect common employee fields
-- normalize common HR labels
-- surface data-quality risk
-- estimate analysis confidence before diagnosis
+- 自动识别常见字段
+- 自动统一常见口径
+- 自动标记数据质量问题
+- 先给可信度，再进入分析
 
-## Local Run
+## 本地运行
 
-This project can be opened directly by double-clicking `index.html`.
+当前项目支持直接双击 `index.html` 打开。
 
-For hosted use, GitHub Pages static deployment remains supported.
+同时仍然兼容 GitHub Pages 静态部署。
 
-## Verification
+## 校验
 
-Current V3 runtime check:
+建议在本地做两项语法检查：
 
 ```bash
-node --check .\src\app-v3.js
+node --check .\src\app-v4.js
+node --check .\src\v4\analysis-engine-v4.js
 ```
-
-## Next V3 Polish Ideas
-
-- split page renderers into dedicated files under `src/v3/`
-- strengthen presenter mode for demo walkthroughs
-- add print-oriented report styling
-- deepen upload confidence explanations for mixed-schema files

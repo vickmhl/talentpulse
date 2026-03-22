@@ -1,8 +1,8 @@
-﻿# TalentPulse Expected Insights
+﻿# TalentPulse V4 预期洞察
 
-- Engineering: high potential, low ready-now bench.
-- Sales: high performance, high flight risk.
-- Operations: stable but low growth momentum.
-- Product: critical-role concentration.
-- Customer Success: missing potential identification.
-- HR / Finance / IT: small teams with high succession risk.
+- 研发中心：高潜储备不低，但现在可接任管理梯队偏薄，说明潜力尚未顺利转成近端梯队。
+- 销售增长：当前业绩亮眼，但过度依赖少数关键人，同时保留风险偏高。
+- 交付运营：运行稳定，但高潜与 1-2 年可接任储备偏少，稳定掩盖了停滞。
+- 产品与设计：关键岗位集中，覆盖存在但深度不足，单点依赖明显。
+- 客户成功：团队规模不小，但高潜识别和梯队可见度弱于团队体量。
+- 人力资源、财务法务、IT与数据平台：体量不大，但关键岗位继任暴露高，风险容易被低估。
