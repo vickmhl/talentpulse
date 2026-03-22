@@ -253,6 +253,33 @@ button, select, input { font: inherit; }
 .priority-card strong { display: block; margin-bottom: 10px; font-size: 16px; }
 .priority-card p { margin: 6px 0 0; color: var(--muted); line-height: 1.6; }
 
+.home-stage { min-height: 100vh; background: linear-gradient(180deg, #fbfdff 0%, #f7f9fc 100%); }
+.home-stage-header { max-width: 1440px; margin: 0 auto; padding: 24px 32px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.home-stage-content { padding-top: 18px; }
+.home-stage-hero { min-height: calc(100vh - 120px); display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: center; }
+
+.overview-workbench { display: grid; gap: 20px; }
+.overview-department-layout { display: grid; grid-template-columns: 320px 1fr; gap: 20px; }
+.department-nav { display: grid; gap: 10px; }
+.department-chip, .issue-switch-card, .linked-department-card, .sample-chip { width: 100%; text-align: left; border: 1px solid var(--border); background: #fff; border-radius: 14px; padding: 14px 16px; cursor: pointer; }
+.department-chip.active, .issue-switch-card.active, .sample-chip.active { border-color: var(--primary); background: #eef4ff; box-shadow: 0 0 0 3px rgba(47, 107, 255, 0.08); }
+.department-chip span, .issue-switch-card span, .linked-department-card span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.department-chip strong, .issue-switch-card strong, .linked-department-card strong { display: block; font-size: 15px; line-height: 1.55; color: #214273; }
+.department-chip small, .issue-switch-card small, .linked-department-card small { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.department-panel { border: 1px solid var(--border); border-radius: 18px; background: #fbfdff; padding: 20px; }
+.department-panel-head { display: flex; align-items: start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.department-panel-head span { color: var(--muted); font-size: 12px; }
+.department-panel-head h3 { margin: 6px 0 0; font-size: 24px; }
+.issue-switcher { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.issue-detail-panel { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; margin-top: 18px; }
+.issue-detail-main, .issue-detail-side, .linked-department-grid, .drawer-sample-list { display: grid; gap: 12px; }
+.linked-department-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 16px; }
+.focus-strip { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 18px; border-radius: 14px; background: #eef4ff; color: #214273; margin-top: 18px; }
+.focus-strip strong { white-space: nowrap; }
+.focus-strip span { font-size: 14px; line-height: 1.6; }
+.drawer-sample-list { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 16px; }
+.sample-chip { color: #214273; }
+
 .demo-rail { padding: 18px 20px; border-radius: 18px; border: 1px solid #d9e5ff; background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%); box-shadow: 0 14px 34px rgba(47, 107, 255, 0.08); }
 .demo-rail-main { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 14px; }
 .demo-rail-main strong { display: block; font-size: 20px; margin: 4px 0; }
@@ -293,9 +320,13 @@ button, select, input { font: inherit; }
   .drill-grid, .workflow-strip, .demo-track-group, .demo-story-grid, .iteration-grid, .demo-cockpit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-proof, .preview-metrics, .story-grid { grid-template-columns: 1fr; }
   .demo-cockpit { grid-template-columns: 1fr; }
+  .home-stage-hero, .overview-department-layout, .issue-detail-panel { grid-template-columns: 1fr; }
+  .issue-switcher, .linked-department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 960px) {
   .demo-rail-main { flex-direction: column; align-items: flex-start; }
   .demo-stepper, .demo-track-group, .demo-story-grid, .iteration-grid, .demo-cockpit-grid { grid-template-columns: 1fr; }
+  .home-stage-header, .focus-strip { flex-direction: column; align-items: flex-start; }
+  .issue-switcher, .linked-department-grid, .drawer-sample-list { grid-template-columns: 1fr; }
 }
