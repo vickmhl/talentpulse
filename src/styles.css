@@ -1107,3 +1107,500 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+:root {
+  --v7-blue: #1f5fff;
+  --v7-ink: #0f172a;
+  --v7-soft: #637188;
+  --v7-line: rgba(15, 23, 42, 0.08);
+}
+
+body {
+  background: #fbfbfc;
+  color: var(--v7-ink);
+}
+
+.shell {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+}
+
+.sidebar {
+  width: 228px;
+  background: rgba(255,255,255,0.82);
+  border-right: 1px solid var(--v7-line);
+  box-shadow: inset -1px 0 0 rgba(15, 23, 42, 0.02);
+}
+
+.nav-item {
+  color: #42536c;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: rgba(31,95,255,0.06);
+  color: var(--v7-blue);
+  box-shadow: none;
+}
+
+.topbar {
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid var(--v7-line);
+}
+
+.topbar h1 {
+  font-size: 30px;
+}
+
+.content {
+  max-width: 1520px;
+  gap: 36px;
+}
+
+.card {
+  border-radius: 28px;
+  border-color: rgba(15, 23, 42, 0.06);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.04);
+}
+
+.stage-hero-v7,
+.overview-hero-v7,
+.report-stage-v7 {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 36px;
+  padding: 44px 48px;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.05);
+}
+
+.compact-hero-v7 {
+  grid-template-columns: 1fr;
+}
+
+.stage-copy-v7 {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.stage-copy-v7 h2 {
+  margin: 8px 0 0;
+  font-size: 54px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  max-width: 720px;
+}
+
+.stage-copy-v7 p {
+  margin: 0;
+  color: var(--v7-soft);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.hero-exhibit-v7,
+.overview-year-board-v7,
+.overview-canvas-v7,
+.chart-stage-v7,
+.report-summary-v7,
+.report-issue-v7,
+.risk-action-item-v7,
+.issue-left-v7,
+.issue-right-v7 {
+  border-radius: 28px;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.hero-exhibit-v7 {
+  padding: 26px;
+  display: grid;
+  gap: 18px;
+}
+
+.exhibit-head-v7,
+.exhibit-priority-v7,
+.canvas-head-v7 {
+  display: grid;
+  gap: 6px;
+}
+
+.exhibit-head-v7 strong,
+.exhibit-priority-v7 strong,
+.canvas-head-v7 h3 {
+  font-size: 24px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.exhibit-head-v7 span,
+.exhibit-priority-v7 span,
+.canvas-head-v7 span,
+.line-caption-v7 span,
+.year-col-v7 span,
+.issue-left-v7 span,
+.problem-branch-v7 span,
+.risk-action-item-v7 span,
+.report-strip-v7 span,
+.report-summary-v7 span {
+  color: var(--v7-soft);
+  font-size: 12px;
+}
+
+.exhibit-tags-v7 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.exhibit-chart-v7 {
+  padding: 12px 0 0;
+}
+
+.exhibit-years-v7 {
+  padding-top: 8px;
+  border-top: 1px solid var(--v7-line);
+}
+
+.stage-rail-v7 {
+  padding-top: 4px;
+}
+
+.overview-hero-v7 {
+  align-items: end;
+}
+
+.overview-badges-v7 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.overview-kpi-strip-v7 .hero-metrics-v6 {
+  gap: 18px;
+}
+
+.overview-kpi-strip-v7 .hero-metric-v6 {
+  background: rgba(255,255,255,0.86);
+  padding: 22px;
+}
+
+.overview-stage-v7 {
+  display: grid;
+  gap: 18px;
+}
+
+.overview-grid-v7 {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 22px;
+}
+
+.overview-departments-v7 {
+  display: grid;
+  gap: 10px;
+}
+
+.department-item-v7,
+.issue-card-v7 {
+  text-align: left;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(15,23,42,0.06);
+  background: rgba(255,255,255,0.84);
+  cursor: pointer;
+}
+
+.department-item-v7.active,
+.issue-card-v7.active {
+  border-color: rgba(31,95,255,0.35);
+  background: rgba(245,248,255,0.96);
+  box-shadow: 0 0 0 3px rgba(31,95,255,0.08);
+}
+
+.department-item-v7 span,
+.issue-card-v7 span {
+  display: block;
+  font-size: 12px;
+  color: var(--v7-soft);
+  margin-bottom: 8px;
+}
+
+.department-item-v7 strong,
+.issue-card-v7 strong,
+.problem-branch-v7 strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--v7-ink);
+}
+
+.department-item-v7 small,
+.issue-card-v7 small,
+.problem-branch-v7 small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--v7-soft);
+}
+
+.overview-canvas-v7 {
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.canvas-chart-v7,
+.canvas-metrics-v7 {
+  padding: 14px 0;
+}
+
+.issue-tabs-v7 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.issue-stage-v7 {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 18px;
+}
+
+.issue-left-v7,
+.issue-right-v7 {
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.issue-left-v7 h3 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.issue-left-v7 p {
+  margin: 0;
+  color: var(--v7-soft);
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.problem-evidence-v7 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.problem-branch-v7 {
+  padding: 16px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.risk-action-map-v7 {
+  display: grid;
+  gap: 12px;
+}
+
+.risk-action-item-v7 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 18px 20px;
+}
+
+.risk-action-item-v7 strong {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.operations-grid-v7 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.chart-stage-v7 {
+  padding: 24px;
+}
+
+.chart-stage-v7 .section-head {
+  margin-bottom: 0;
+}
+
+.line-chart-wrap-v7 {
+  display: grid;
+  gap: 8px;
+}
+
+.line-chart-v7 {
+  width: 100%;
+  height: auto;
+}
+
+.line-path-v7 {
+  fill: none;
+  stroke: var(--v7-blue);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.line-caption-v7 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.line-caption-v7 strong {
+  font-size: 22px;
+}
+
+.year-compare-v7 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+  min-height: 160px;
+}
+
+.year-col-v7 {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.year-bar-v7 {
+  width: 100%;
+  height: 112px;
+  border-radius: 18px;
+  background: #f3f6fb;
+  display: flex;
+  align-items: end;
+  padding: 10px;
+}
+
+.year-bar-v7 div {
+  width: 100%;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #4b82ff 0%, #1f5fff 100%);
+}
+
+.year-col-v7 strong {
+  font-size: 14px;
+}
+
+.report-stage-v7 {
+  align-items: start;
+}
+
+.report-summary-v7 {
+  padding: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.report-summary-v7 > div {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--v7-line);
+}
+
+.report-summary-v7 > div:last-child {
+  border-bottom: 0;
+}
+
+.report-summary-v7 strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.report-strip-v7 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.report-strip-v7 > div {
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  display: grid;
+  gap: 8px;
+}
+
+.report-strip-v7 strong {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.issue-triptych-v7 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.report-issue-v7 {
+  padding: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.report-issue-v7 > span {
+  display: block;
+  color: var(--v7-soft);
+  font-size: 12px;
+}
+
+.link-tile-v6 {
+  border-radius: 22px;
+  background: rgba(255,255,255,0.84);
+}
+
+@media (max-width: 1280px) {
+  .stage-hero-v7,
+  .overview-hero-v7,
+  .report-stage-v7,
+  .overview-grid-v7,
+  .issue-stage-v7,
+  .operations-grid-v7,
+  .report-strip-v7,
+  .issue-triptych-v7,
+  .risk-action-item-v7 {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-tabs-v7,
+  .problem-evidence-v7 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stage-copy-v7 h2 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 960px) {
+  .stage-copy-v7 h2 {
+    font-size: 34px;
+  }
+
+  .issue-tabs-v7,
+  .problem-evidence-v7,
+  .year-compare-v7,
+  .operations-grid-v7,
+  .report-strip-v7,
+  .issue-triptych-v7 {
+    grid-template-columns: 1fr;
+  }
+}
