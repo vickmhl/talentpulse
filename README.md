@@ -1,34 +1,22 @@
-﻿# TalentPulse V2
+﻿# TalentPulse V3
 
-TalentPulse is a PC web portfolio product for HR students and early-career HR practitioners. The product is designed to help users demonstrate three things in interviews:
+TalentPulse is a PC web portfolio product for HR students and early-career HR practitioners.
 
-- AI usage ability
-- Analytical ability
-- Organizational diagnosis ability
+It is not a heavy HR SaaS or an admin backend. It is an AI-assisted talent review and succession diagnosis workbench built for interview presentation.
 
-This is not a heavy admin system. It is a static-deploy-friendly AI talent review and succession diagnosis experience that turns employee data into report-ready organizational insight.
+The core product promise is:
 
-## V2 Positioning
+`Turn employee data into report-ready organizational diagnosis.`
 
-The second version is rebuilt around one product promise:
+## V3 Product Positioning
 
-`Turn employee data into report-ready organizational insight.`
+TalentPulse V3 is designed to help a user prove three things in an interview:
 
-The product narrative now follows:
+- They can use AI to structure messy HR data.
+- They can diagnose organizational issues instead of only reading charts.
+- They can turn people data into management-ready language and actions.
 
-`Describe -> Explain -> Predict -> Control -> Report`
-
-That means the experience is built to answer five questions:
-
-1. What is happening now?
-2. Why is it happening?
-3. What may happen next?
-4. What should be done now?
-5. How can this be presented as a report?
-
-## Primary Navigation
-
-The V2 information architecture centers on six primary pages:
+The experience is organized around six pages:
 
 - Home
 - Overview
@@ -37,163 +25,164 @@ The V2 information architecture centers on six primary pages:
 - Data Health
 - Report
 
-`Home`, `Overview`, and `Report` are the strongest portfolio pages.
+`Home`, `Overview`, and `Report` are the main stage.
+`Talent Review`, `Succession`, and `Data Health` are evidence pages.
 
-## What Changed in V2
+## V3 Narrative Framework
 
-### 1. Home was rebuilt as a portfolio entry page
+The main analytical flow is:
 
-Home now clearly emphasizes two entry points:
+`Conclusion -> Evidence -> Explanation -> Risk -> Action`
 
-- Try Demo
-- Upload Employee Data
+Across the product this maps to:
 
-It also highlights the AI value proposition, the NovaEdge demo company story, and the end-to-end workflow from diagnosis to report.
-
-### 2. Overview became the strongest page in the product
-
-Overview is now the main 2-3 minute interview storytelling page. It includes:
-
-- Executive Summary
-- Describe section
-- Explain section
-- Predict section
-- Control section
-- Drill-down links
-- Fragile key-role table
-
-### 3. Data Health became a trust page instead of a dirty-data list
-
-The page now explains:
-
-- what the system auto-understood
-- what it auto-fixed
-- what still needs caution
-- how trustworthy the current analysis is
-
-### 4. Talent Review now tells a talent story
-
-The page now supports explaining:
-
-- department talent density
-- high-potential concentration
-- high performers who are not successor-ready
-- a selected talent narrative for interview walkthroughs
-
-### 5. Succession now focuses on bench strength and exposure
-
-The page now emphasizes:
-
-- critical role coverage
-- ready-now / ready-soon distribution
-- heatmap of role readiness
-- role detail panel
-- uncovered role list
-- action-oriented succession risk summary
-
-### 6. Report is now a real presentation page
-
-The page now follows a report structure:
-
-- Current State
-- Why It Is Happening
-- What May Happen Next
-- What To Do Now
-- Priority Actions
-
-It is designed to be read directly in an interview or stakeholder presentation.
+- Describe
+- Explain
+- Predict
+- Control
+- Report
 
 ## Demo Story
 
-The official demo company is `NovaEdge Technologies` with roughly 300 employees.
+The official demo company is `NovaEdge Technologies` with about 300 employees.
 
-The demo is intentionally structured to surface stable organizational stories:
+The demo is intentionally structured to surface stable organizational issues:
 
-- R&D has strong high-potential density but thin ready-now leadership cover
-- Sales performs strongly but carries high flight risk and star dependency
-- Operations is stable but stagnant
-- Product has concentrated critical-role dependency
-- Customer Success has weaker high-potential identification quality
-- HR, Finance, and IT have small but high-risk succession benches
+- R&D has strong high-potential density but thin ready-now leadership cover.
+- Sales performs strongly but carries star dependency and high flight risk.
+- Operations is stable but short on growth momentum.
+- Product has concentrated critical-role dependency.
+- Customer Success has weaker high-potential visibility than its size suggests.
+- HR, Finance, and IT are small but succession-fragile.
 
-## Data Capabilities
+## What Changed in V3
 
-TalentPulse V2 keeps static deployment simple while making AI value visible in the product.
+### 1. Home is now a portfolio entry page
 
-### Auto-detect and normalization
+Home now emphasizes:
 
-The site attempts to automatically:
+- product pitch
+- Demo / Upload dual entry
+- AI value proof
+- demo cockpit preview
+- lightweight upload reassurance
 
-- recognize common employee field names
-- normalize department and role aliases
-- standardize date formats
-- de-duplicate analytical records
+### 2. Overview is now the single-page control tower
 
-### Upload support
+Overview now follows a fixed diagnostic structure:
 
-The site supports:
+- Executive Summary Hero
+- Current State
+- Key Issues
+- Why It's Happening
+- Priority Focus
+- Risk Outlook
+- Recommended Actions
+- Drill-down links
 
-- CSV upload directly in-browser
-- XLSX upload through the browser spreadsheet parser on the hosted version
+### 3. Analysis logic is no longer only department-threshold storytelling
 
-### Data confidence
+V3 introduces a signal-based diagnosis layer. It first detects structural signals such as:
 
-The site evaluates:
+- high-potential concentration
+- ready-now shortage
+- high-performer / successor mismatch
+- uncovered critical-role clusters
+- single-point dependency
+- support-function low-visibility risk
+- low pipeline signals
 
-- auto-fixed issues
-- caution-level issues
-- material risk issues
-- overall analysis confidence
+These signals are then combined into issues and report-ready judgments.
 
-## Key Files
+### 4. Evidence pages now stay organization-first
+
+`Talent Review` and `Succession` now lead with organizational judgments. Employee and candidate details are pushed lower and wrapped as secondary drill-down evidence instead of taking first-screen attention.
+
+### 5. Data Health now behaves as a trust page
+
+The page now focuses on:
+
+- confidence verdict
+- auto-understood fields
+- auto-fixed normalization work
+- low-confidence areas
+- impact on analysis
+- appendix evidence table
+
+### 6. Report now models real issue structure
+
+Each top issue is expressed as:
+
+- issue title
+- phenomenon
+- root cause
+- likely consequence
+- recommended move
+
+## Runtime and File Structure
+
+Current runtime entry:
+
+- `index.html`
+- `src/app-v3.js`
+
+Analysis logic is now separated into:
+
+- `src/v3/analysis-engine.js`
+
+Key source files:
 
 ```text
 TalentPulse/
 ├─ index.html
 ├─ README.md
-├─ GITHUB_PAGES_DEPLOY.md
 ├─ demo/
 │  ├─ demo_talentpulse_company.xlsx
 │  ├─ demo_employees.json
 │  ├─ demo_org_metadata.json
 │  ├─ demo_scenario_guide.md
 │  └─ demo_expected_insights.md
-├─ scripts/
-│  └─ generate-demo-clean.ps1
-└─ src/
-   ├─ demo-data.js
-   ├─ app-v2.js
-   └─ styles.css
+├─ src/
+│  ├─ demo-data.js
+│  ├─ styles.css
+│  ├─ app-v3.js
+│  └─ v3/
+│     └─ analysis-engine.js
+└─ scripts/
+   └─ generate-demo-clean.ps1
 ```
 
-## Run Locally
+## Upload Support
 
-The project can still be opened directly by double-clicking `index.html`.
+The product supports:
 
-For the hosted version, GitHub Pages static deployment remains supported.
+- CSV upload in-browser
+- XLSX upload in-browser when the spreadsheet parser is available
 
-## Deploy
+The upload flow attempts to:
 
-GitHub Pages deployment notes are in:
+- auto-detect common employee fields
+- normalize common HR labels
+- surface data-quality risk
+- estimate analysis confidence before diagnosis
 
-- `GITHUB_PAGES_DEPLOY.md`
+## Local Run
+
+This project can be opened directly by double-clicking `index.html`.
+
+For hosted use, GitHub Pages static deployment remains supported.
 
 ## Verification
 
-The V2 runtime entry is:
-
-- `src/app-v2.js`
-
-The script passes:
+Current V3 runtime check:
 
 ```bash
-node --check .\src\app-v2.js
+node --check .\src\app-v3.js
 ```
 
-## Next Iteration Ideas
+## Next V3 Polish Ideas
 
-- split the current runtime file into smaller modules
-- improve CSV parsing robustness for quoted commas
-- add a dedicated profile route while keeping the six-page main navigation
-- export a richer report format such as Markdown or PDF
-- deepen the Explain and Predict logic with more scenario templates
+- split page renderers into dedicated files under `src/v3/`
+- strengthen presenter mode for demo walkthroughs
+- add print-oriented report styling
+- deepen upload confidence explanations for mixed-schema files
